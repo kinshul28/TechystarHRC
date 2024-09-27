@@ -1,0 +1,182 @@
+@import 'colors';
+
+.home1{
+    height: 100vh;
+    width: 100%;
+    border-radius: 0 0 200px 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    >main{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        position: absolute;
+        >h1{
+            color: $first;
+            padding: 0.1rem 4rem;
+            font: 400 6rem $text1;
+        }
+    
+        >p{
+            color: $first;
+            padding: 0rem 4rem;
+            font: 900 1rem $text1;
+            text-transform: uppercase;
+        }
+    }
+
+    &::before{
+        content: "";
+        height: 100vh;
+        width: 100%;
+        background: no-repeat center/auto url("../assets/1.png") ;
+        // position: absolute;
+        border-radius: 0 0 200px 200px;
+        filter: blur(1px);
+                
+    }
+}
+
+.home2{
+    width: 100%;
+    height: 100vh;
+    margin-top: -200px;
+    background-color: $second;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px ;
+    // padding: 500px 0; //as in master
+
+    >img{
+        width: 30%;
+        // margin: 0 auto;
+        animation: imgup 0.7s linear alternate infinite;
+    }
+
+    >div{
+        display: flex;
+        // flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100vh;
+        padding: 5rem;
+        
+        >p{
+            word-spacing: 5px;
+            letter-spacing: 2px;
+            color: $first;
+            font: 100 1.2rem $text2 ;
+        }        
+    }
+}
+
+@keyframes imgup{
+    to{
+        transform: translateY(-10px);
+    }
+}
+
+.home3{
+    height: 120vh;
+    width: 100%;
+    background-color: $second;
+    display: flex;
+    justify-content: flex-start;
+    
+    >main{
+        display: flex;
+        flex-direction: column;
+        background-color: $first;
+        width: 70%;
+        height: 100vh;
+        padding: 100px;
+        border-radius: 0 200px 200px 0;
+
+        >h1{
+            padding: 0.5rem;
+            width: 230px;
+            margin: 0 auto;
+            border-bottom: 2px solid $dark;
+            text-align: center;
+        }
+        >p{
+            margin-top: 20px;
+            word-spacing: 5px;
+            letter-spacing: 1px;
+            font: 100 1.2rem $text2;
+            line-height: 170%;
+
+        }
+        
+    }
+}
+
+.home4{
+    min-height: 100vh;
+    width: 100%;
+    background-color: $second;
+    display: flex;
+    justify-content: flex-end;
+    // padding: 300px 0;
+    
+    
+    >main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 200px 0 0 200px;
+        background-color: $third;
+        height: 70vh;
+        width: 70%;
+
+        >h1{
+            color: $first;
+            border-bottom: 2px solid $first ;
+            padding: 0.5rem;
+            width: 140px;
+        }
+        >article{   
+            display: flex;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            >div{
+                animation: imgup 0.7s linear infinite alternate;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 30px;
+                border-radius: 50%;
+                background-color: $first;
+                cursor: pointer;
+                margin: 1rem;
+                font: 400 1.2rem $text2;
+                color: $dark;
+                height: 10rem;
+                width: 10rem;
+                transition: all 0.5s;
+
+                &:hover {
+                    filter: invert(1);
+                  }
+
+                >svg{
+                    font-size: 3rem;
+                }
+
+                >p{
+                    font: 900 1.2rem $text2;
+                }
+            }
+        }
+        
+    }
+}

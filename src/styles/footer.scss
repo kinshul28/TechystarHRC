@@ -1,0 +1,52 @@
+@import 'colors.scss';
+
+footer{
+    display: grid;
+    height: 20vh;
+    width: 100%;
+    background-color: $first;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    padding: 2rem;
+
+    >div{
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+        
+            
+        >h1{
+            color: $third;
+            // font: 300 4rem $text1;    
+        }    
+        >p {
+            font: 500 1.2rem $text1;
+        }
+        h5{
+            font: 300 2rem $text1;
+            margin: 1rem 0;
+            color: $third;
+        }
+        >div{ //as done in master
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            >a {
+                font: 800 1rem $text1;
+            }
+        }
+    }
+
+    :last-child{ //as done by me
+        align-items: center;  
+        margin-bottom: 0.5rem;
+
+        >a {
+            font: 600 1rem $text2;
+            color: $dark;
+
+        }
+    }
+    
+}
